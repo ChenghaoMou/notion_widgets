@@ -1,0 +1,29 @@
+<!-- original : https://codepen.io/SeanNorton/pen/LWBXQL -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Today</title>
+    <link type="text/css" rel="stylesheet" href="style/main.css" />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+    ></script>
+  </head>
+  <body>
+    <p class="title" id="week"></p>
+    <script>
+      function date() {
+        document.getElementById("week").innerHTML = "Life";
+      }
+
+      function dateTime() {
+        date();
+        setTimeout(dateTime, 500);
+      }
+
+      dateTime();
+    </script>
+  </body>
+</html>
