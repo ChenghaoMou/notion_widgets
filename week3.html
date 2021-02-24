@@ -1,0 +1,33 @@
+<!-- original : https://codepen.io/SeanNorton/pen/LWBXQL -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Today</title>
+    <link type="text/css" rel="stylesheet" href="style/main.css" />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+    ></script>
+  </head>
+  <body>
+    <p class="title" id="week"></p>
+    <p class="sub-title" id="date"></p>
+    <script>
+      function date() {
+        const from_date = moment().add(2, 'weeks').startOf('week');
+        const to_date = moment().add(2, 'weeks').endOf('week');
+        document.getElementById("week").innerHTML = "W" + moment().add(2, 'weeks').week() + ", " + moment().add(2, 'weeks').year();
+        document.getElementById("date").innerHTML = from_date.format("DD MMMM") + " - " + to_date.format("DD MMMM");
+      }
+
+      function dateTime() {
+        date();
+        setTimeout(dateTime, 500);
+      }
+
+      dateTime();
+    </script>
+  </body>
+</html>
