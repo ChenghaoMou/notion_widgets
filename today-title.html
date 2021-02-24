@@ -12,19 +12,6 @@
     ></script>
   </head>
   <body>
-    <p class="today" id="date"></p>
-
-    <script>
-      function date() {
-        document.getElementById("date").innerHTML = moment().format(
-          "dddd, MMMM Do <br/> H:mm"
-        );
-      }
-      function dateTime() {
-        date();
-        setTimeout(dateTime, 500);
-      }
-      dateTime();
-    </script>
+    <p style="font-size: 48px; font-weight: 700; font-weight: 800; line-height: 58px;">Today</p>
   </body>
 </html>
